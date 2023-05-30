@@ -33,7 +33,7 @@ public class Board {
 		int row = move.getCell().getRow();
 		int col = move.getCell().getCol();
 		
-		if(this.board.get(row).get(col).getCellStatus().equals(CellStatus.EMPTY)) {
+		if(row >= 0 && row < dimension && col >= 0 && col < dimension && board.get(row).get(col).getCellStatus().equals(CellStatus.EMPTY)) {
 			return true;
 		}
 		else {
